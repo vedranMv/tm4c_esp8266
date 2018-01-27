@@ -1,0 +1,1 @@
+"./main.obj" "./tm4c1294ncpdt_startup_ccs.obj" "./uartstdio.obj" "./HAL/tm4c1294/hal_common_tm4c.obj" "./HAL/tm4c1294/hal_esp_tm4c.obj" "./esp8266/esp8266.obj" "./esp8266/espClient.obj" "./libs/myLib.obj" "./serialPort/uartHW.obj" "../tm4c1294ncpdt.cmd" -llibc.a -l"/media/v125/shared/Programming/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" 
