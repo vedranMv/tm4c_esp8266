@@ -50,8 +50,17 @@ int main(void)
     esp.AddHook(ESPDataReceived);
     //  Connect to AP in blocking mode
     esp.ConnectAP("sgvfyj7a", "7vxy3b5d", false);
-    DEBUG_WRITE("Connected\nOpenning connection to TCP server...");
 
+    if (esp.MyIP() == 0)
+    {
+        DEBUG_WRITE("Failed to acquire IP!");
+        while(1);
+    }
+
+
+    DEBUG_WRITE("Connected\n Acquired IP: %d \n", esp.MyIP());
+
+    DEBUG_WRITE("Opening connection to TCP server...");
     //  Connect to a TCP server (192.168.0.12:52699), keep socket alive
     //  Function returns socket descriptor. Save it so we can reply to the socket
     socketId = esp.OpenTCPSock("192.168.0.16", 52699, true);

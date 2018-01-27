@@ -1,0 +1,9 @@
+/HAL/
+/esp8266/
+/libs/
+/makefile
+/objects.mk
+/serialPort/
+/sources.mk
+/subdir_rules.mk
+/subdir_vars.mk
