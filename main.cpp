@@ -58,7 +58,7 @@ int main(void)
     }
 
 
-    DEBUG_WRITE("Connected\n Acquired IP: %d \n", esp.MyIP());
+    DEBUG_WRITE("Connected\n Acquired IP: %u \n", esp.MyIP());
 
     DEBUG_WRITE("Opening connection to TCP server...");
     //  Connect to a TCP server (192.168.0.12:52699), keep socket alive
@@ -77,8 +77,8 @@ int main(void)
 
     //  Every 3s send a message to TCP server - after 45s (15 messages) close
     //  the server and disconnect after
-    int8_t counter = 15;
-    while (counter--)
+    int8_t counter = 0;
+    while (counter < 15)
     {
         //  Send data to an open socket. If you ensure that string is
         //  null-terminated then there's no need to supply length parameter
@@ -94,9 +94,10 @@ int main(void)
             esp.GetClientBySockID(socketId)->SendTCP("I've received your message!\n\0");
         }
 
-        DEBUG_WRITE("Sent a message, %d more to go\n", counter);
+        DEBUG_WRITE("Sent a message, %d more to go\n", (15 - counter));
         //  Do nothing for cca 3s
         HAL_DelayUS(3000000);
+        counter++;
     }
 
     //  Close socket
