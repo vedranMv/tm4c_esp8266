@@ -3,7 +3,7 @@ ESP8266 on Tiva TM4C1294
 
 This repository contains an example project for running ESP8266 wifi module with TM4C1294 microcontroller. __Note__ that the project is for CodeComposer studio.
 
-Code is taken from a bigger project I worked on and can be integrated with other modules from there (task scheduler and event logger) hence the macro switches in ``esp8266.cpp`` source :)
+Code is taken from a [bigger project I worked on](https://github.com/vedranMv/roverRPi3)  and can be integrated with other modules from there (task scheduler and event logger) hence the macro switches in ``esp8266.cpp`` source :)
 
 ## Wiring
 
