@@ -45,4 +45,4 @@ Baudrate of ESP8266 in this example has been set to 1000000, but it can be confi
 To run the example change your AP details and local IP of your PC in ``main.c``. Then start TCP server (in linux, tcp server can simply be run from PC by using netcat ``nc -l 52699``). After that just compile and upload the code to MCU. Result should look something like this:
 
 
-![alt tag](https://hsr.duckdns.org/images/tm4c/test.png)
+![alt tag](https://vedran.ml/public/images/tm4c/test.png)
